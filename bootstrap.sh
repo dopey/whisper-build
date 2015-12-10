@@ -10,7 +10,7 @@ trap "rm -rf \"$TMP\"" EXIT INT QUIT TERM
 
 git clone git@github.com:graphite-project/whisper
 cd whisper
-git checkout -B "$VERSION" "0.9.14"
+git checkout -B "$VERSION" "$VERSION"
 
 python setup.py install --install-data $TMP/prepare/var/lib/graphite --install-lib $TMP/prepare/opt/graphite/lib --prefix $TMP/prepare/opt/graphite
 cd ../prepare
